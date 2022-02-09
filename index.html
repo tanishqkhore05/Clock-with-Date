@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+
+    <title>Hello, world!</title>
+    <script>
+        let a;
+        let date;
+        let time;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+            a = new Date();
+            date = a.toLocaleDateString(undefined, options);
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            document.getElementById('time').innerHTML = time + "<br> " + date ;
+        }, 1000);
+    
+    </script>
+
+    <style>
+        .jumbotron {
+           margin-left: 180px;
+           width: 50em;
+
+
+        }
+
+        /* .clock{
+            margin-left: 550px;  
+            padding-top: 20px;
+            padding-bottom: 10px;
+            
+             font: 2em sans-serif; 
+            font-family: emoji;
+            font-style: oblique ;            
+            font-size:  40.8px;
+            color: white;
+        
+        } */
+
+    </style>
+
+
+
+</head>
+
+<body style="background-color:black;">
+    
+
+    <!-- <h2 class="clock">THE CLOCK</h2> -->
+
+    <div class="container my-4" >
+        <div class="jumbotron">
+            <h1 class="display-4"  > <span id="time"></span></h1>
+            
+        </div>
+    </div>
+
+    >
+</body>
+
+</html>
